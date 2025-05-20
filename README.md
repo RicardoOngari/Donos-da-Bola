@@ -53,3 +53,55 @@ O **Gerenciador de Jogadores** é um aplicativo desenvolvido em **React Native u
 | @expo-google-fonts/montserrat    | Fontes personalizadas.                  |
 | expo-font                        | Carregamento de fontes.                 |
 | axios                            | Chamadas HTTP para a API.               |
+
+
+
+Back end
+# Mobile API
+
+Este é um projeto backend em Node.js para gerenciamento de jogadores, utilizando Express e integração com banco de dados. Pode ser utilizado em conjunto com uma aplicação mobile ou web como backend RESTful.
+
+## 📁 Estrutura do Projeto
+
+```
+Mobile-main/
+├── certs/
+│   └── aiven-ca.pem          # Certificado SSL para conexão segura
+├── config/
+│   └── database.js           # Configuração do banco de dados
+├── controllers/
+│   └── jogadorController.js  # Lógica de controle para a entidade "jogador"
+├── server.js                 # Ponto de entrada da aplicação
+├── package.json              # Dependências e scripts do projeto
+```
+
+## 🚀 Tecnologias Utilizadas
+
+- Node.js  
+- Express  
+- Mysql  
+- SSL/TLS (certificados)
+
+## ⚙️ Instalação
+
+1. Clone o repositório:  
+   `git clone https://github.com/seu-usuario/seu-repositorio.git`
+
+2. Instale as dependências:  
+   `npm install`
+
+3. Configure as variáveis de ambiente e o banco de dados no arquivo `config/database.js`
+
+4. Inicie o servidor:  
+   `node server.js`
+
+## 📡 Rotas
+
+- `GET /jogadores`        - Lista todos os jogadores  
+- `POST /jogadores`       - Cria um novo jogador  
+- `PUT /jogadores/:id`    - Atualiza um jogador  
+- `DELETE /jogadores/:id` - Remove um jogador
+
+## 🔐 Segurança
+
+A aplicação utiliza certificado SSL (`certs/aiven-ca.pem`) para garantir uma conexão segura com o banco de dados.
