@@ -7,9 +7,9 @@ const caCertPath = path.join(__dirname, '..', 'certs', 'aiven-ca.pem');
 
 const connection = mysql.createConnection({
   host: 'mysql-back-lsilva41559-98bf.l.aivencloud.com',
-  port: 16801,
+  port: ,
   user: 'avnadmin',
-  password: 'AVNS_b3mFWIWt0AvycOxw3Lz',
+  password: '',
   database: 'db_jogadores',
   ssl: {
     ca: fs.readFileSync(caCertPath) // Lendo o certificado
