@@ -40,7 +40,10 @@ export default function EditPlayerScreen({ route, navigation }) {
                 Nacionalidade: {jogador.nacionalidade ?? 'Não informado'}
               </Text>
               {imagens.bandeiras[jogador.nacionalidade] && (
-                <Image source={{ uri: imagens.bandeiras[jogador.nacionalidade] }} style={styles.bandeira} />
+                <Image
+                  source={{ uri: imagens.bandeiras[jogador.nacionalidade] }}
+                  style={styles.bandeira}
+                />
               )}
             </View>
           </View>
@@ -79,21 +82,26 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     marginBottom: 20,
+    textAlign: 'center',
   },
   detailsContainer: {
-    backgroundColor: 'rgba(255,255,255,0.1)',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)', 
     padding: 20,
     borderRadius: 10,
     width: '100%',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.3)', 
   },
   detailText: {
     fontSize: 18,
     color: '#fff',
+    flexShrink: 1,
   },
   detailRow: {
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
+    flexWrap: 'wrap',
   },
   logoTime: {
     width: 30,
